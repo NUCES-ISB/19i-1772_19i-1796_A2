@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Data</title>
+</head>
+<body>
+    <h1>Stock Chart</h1>
+    <div>
+        {{ plot_div|safe }}
+    </div>
+    <h1>Data</h1>
+    <table border="1">
+        {{ data|safe }}
+    </table>
+    <h1>Predictions</h1>
+    <ul>
+        {% for prediction in predictions %}
+            <li>{{ prediction }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
